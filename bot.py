@@ -5,7 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandle
 
 # Файл для сохранения данных
 USERS_DB_FILE = "users_db.json"
-ADMIN_ID = "5035772785"  # Замените на Telegram ID администратора
+ADMIN_ID = ""  # Замените на Telegram ID администратора
 
 # Загрузка базы данных
 try:
@@ -260,7 +260,7 @@ async def new_order(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # Основная функция
 def main():
-    app = ApplicationBuilder().token("7151681070:AAE831IXt_w7PWe05UyWzjAjurN8nv-0XYc").build()
+    app = ApplicationBuilder().token("").build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(view_profile, pattern="^view_profile$"))
